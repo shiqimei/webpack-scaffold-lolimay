@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const optimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const merge = require('webpack-merge')
 
@@ -29,7 +30,10 @@ const common = {
             template: 'index.html',
             favicon: 'favicon.ico',
             chunksSortMode: 'dependency'
-        })
+        }),
+        new CopyWebpackPlugin([
+            {from: 'src/assets', to: 'assets'}
+        ])
     ]
 }
 
