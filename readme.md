@@ -96,9 +96,9 @@ I rely on a shell script to do all these work, the content of `scripts/webinit.s
 mkdir $1 && cd $1
 cp /media/lolimay/Code/Web/Template/webpack/scaffold/. . -r # please replace the path to your own webpack template path
 npm init -y
-cnpm i -D chalk # if you dont install cnpm, please change cnpm to npm
+npm i -D chalk
 node build/initialize.js
-cnpm i -D babel-eslint clean-webpack-plugin css-loader eslint # if you dont install cnpm, please change cnpm to npm
+npm i -D babel-eslint clean-webpack-plugin css-loader eslint
 html-webpack-plugin inline-manifest-webpack-plugin optimize-css-assets-webpack-plugin style-loader uglifyjs-webpack-plugin webpack webpack-dev-server webpack-merge copy-webpack-plugin
 ````
 ## 4. Add alias
