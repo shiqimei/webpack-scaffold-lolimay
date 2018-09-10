@@ -23,7 +23,7 @@ fs.readFile(path.join(__dirname, '../package.json'), 'utf8', (err, pkg) => {
     const scripts = pkg.scripts
 
     delete scripts.test
-    scripts.start = 'NODE_ENV=development webpack-dev-server --open --hot --config build/webpack.config.js'
+    scripts.start = 'NODE_ENV=development webpack-dev-server --host 0.0.0.0 --open --hot --config build/webpack.config.js'
     scripts.build = 'NODE_ENV=production webpack --config build/webpack.config.js'
 
     fs.writeFile(path.join(__dirname, '../package.json'), JSON.stringify(pkg, null, 4), (err) => {
