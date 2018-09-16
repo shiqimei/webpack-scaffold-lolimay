@@ -105,8 +105,8 @@ const production = merge(common, {
                 extractComments: false,
                 uglifyOptions: {
                     parallel: 4,
+                    ecma: 8,
                     compress: {
-                        ecma: 6,
                         toplevel: true,
                         warnings: false,
                     },
