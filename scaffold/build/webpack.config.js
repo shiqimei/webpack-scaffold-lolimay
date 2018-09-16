@@ -25,7 +25,9 @@ const common = {
         runtimeChunk: 'single',
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['dist'], {
+            root: path.join(__dirname, '..')
+        }),
         new HtmlWebpackPlugin({
             template: 'index.html',
             favicon: 'favicon.ico',
