@@ -8,9 +8,18 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const optimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const merge = require('webpack-merge')
 
+function resolve (dir) {
+    return path.join(__dirname, '..', dir)
+}
+
 const common = {
     entry: {
         app: './src/index.js'
+    },
+    resolve: {
+        alias: {
+          '@': resolve('src'),
+        }
     },
     module: {
         rules: [
