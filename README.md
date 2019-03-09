@@ -8,6 +8,9 @@ a simple webpack scaffold which make you setup your web project faster.
 git clone git@github.com:lolimay/webpack-scaffold-lolimay.git <project-name>
 cd <project-name>
 yarn
+# remove current git repo and init new
+rm .git -rf
+git init
 ````
 
 # Setup
