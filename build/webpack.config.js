@@ -67,6 +67,9 @@ const development = merge(common, {
                 pathRewrite: {'^/api' : ''},
                 changeOrigin: true,
                 secure: false,
+                headers: {
+                    'x-real-ip': '61.190.56.217'
+                }
               }
         }
     },
